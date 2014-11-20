@@ -52,6 +52,9 @@ mv $build_dir/node-v$node_version-linux-x64 $build_dir/vendor/node
 chmod +x $build_dir/vendor/node/bin/*
 PATH=$PATH:$build_dir/vendor/node/bin
 
+# create export file for subsequent processes (python buildpack uses $HOME dir for build process)
+echo "export PATH=\"$build_dir/vendor/node/bin:$build_dir/node_modules/.bin:\$HOME/vendor/node/bin:\$HOME/node_modules/.bin:\$PATH\";" > $bp_dir/export
+
 # Run subsequent node/npm commands from the build path
 cd $build_dir
 
