@@ -116,6 +116,9 @@ build_dependencies() {
   else
     install_node_modules "$BUILD_DIR"
   fi
+
+  install_bower_modules "$BUILD_DIR"
+  run_gulp_script "$BUILD_DIR"
 }
 
 header "Building dependencies"
