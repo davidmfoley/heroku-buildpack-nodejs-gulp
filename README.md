@@ -26,7 +26,7 @@ Credits
 -------
 Forked from [heroku-buildpack-nodejs-gulp-bower] (https://github.com/davidmfoley/heroku-buildpack-nodejs-gulp-bower).
 
-Forked from [heroku-buildpack-nodejs-gulp](https://github.com/timdp/heroku-buildpack-nodejs-gulp).
+Which was Forked from [heroku-buildpack-nodejs-gulp](https://github.com/timdp/heroku-buildpack-nodejs-gulp).
 
 Which was forked from [heroku-buildpack-nodejs](https://github.com/heroku/heroku-buildpack-nodejs).
 
