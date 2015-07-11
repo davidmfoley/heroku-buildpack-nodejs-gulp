@@ -49,18 +49,14 @@ install_bower_modules() {
 
 run_gulp_script() {
   local build_dir=${1:-}
+  local node_env=${2:-}
 
   if [ -e $build_dir/gulpfile.js ] || [ -e $build_dir/gulpfile.coffee ]; then
-    # get the env vars
-    if [ -d "$env_dir" ]; then
-      status "Exporting config vars to environment"
-      export_env_dir $env_dir
-    fi
 
     # Install gulp locally
     npm install gulp
-    echo "-----> Found gulpfile, running gulp heroku:$NODE_ENV task"
-    $build_dir/node_modules/.bin/gulp heroku:$NODE_ENV
+    echo "-----> Found gulpfile, running gulp heroku:$node_env task"
+    $build_dir/node_modules/.bin/gulp heroku:$node_env
   else
     echo "-----> No gulpfile found"
   fi

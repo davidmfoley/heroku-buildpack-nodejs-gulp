@@ -118,7 +118,8 @@ build_dependencies() {
   fi
 
   install_bower_modules "$BUILD_DIR"
-  run_gulp_script "$BUILD_DIR"
+  echo "----> environment $NODE_ENV"
+  run_gulp_script "$BUILD_DIR" "$NODE_ENV"
 }
 
 header "Building dependencies"
